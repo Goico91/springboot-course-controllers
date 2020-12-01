@@ -1,30 +1,28 @@
 package com.course.springboot.controllers.springbootcontrollers.controllers.dto;
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.List;
 
 public class EmployeeDTO implements Serializable {
-    private int id;
 
+    @NotNull(message = "Name can not be null")
     private String name;
 
+    @NotBlank(message = "Surname can not be null")
     private String surname;
 
+    @NotBlank(message = "Password can not be null")
     private String password;
 
-    private int age;
+    @Min(value = 18, message = "Min age is 18 years")
+    @Max(value = 100, message = "Max age is 100 years")
+    private Integer age;
 
+    @Pattern(regexp = "[a-zA-Z]+")
     private String rol;
 
     private List<String> knowledge;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -50,11 +48,11 @@ public class EmployeeDTO implements Serializable {
         this.password = password;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

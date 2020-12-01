@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class ListEmployeesDTO implements Serializable {
-    private int id;
+    private int idEmployee;
 
     private String name;
 
@@ -12,12 +12,12 @@ public class ListEmployeesDTO implements Serializable {
 
     private List<String> knowledge;
 
-    public int getId() {
-        return id;
+    public int getIdEmployee() {
+        return idEmployee;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdEmployee(int idEmployee) {
+        this.idEmployee = idEmployee;
     }
 
     public String getName() {

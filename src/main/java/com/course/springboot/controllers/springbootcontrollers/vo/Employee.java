@@ -12,7 +12,7 @@ public class Employee implements Serializable {
 
     private String password;
 
-    private int age;
+    private Integer age;
 
     private String rol;
 
@@ -21,7 +21,7 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public Employee(int id, String name, String surname, String password, int age, String rol, List<String> knowledge) {
+    public Employee(int id, String name, String surname, String password, Integer age, String rol, List<String> knowledge) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -63,11 +63,11 @@ public class Employee implements Serializable {
         this.password = password;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

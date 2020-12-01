@@ -5,6 +5,7 @@ import com.course.springboot.controllers.springbootcontrollers.controllers.dto.L
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -14,11 +15,17 @@ import java.util.List;
 public interface EmployeesApi {
 
     @GetMapping
-    ResponseEntity<List<ListEmployeesDTO>> getEmployees(@RequestParam(required = false) String name, @RequestParam(required = false) String knowledge);
+    ResponseEntity<List<ListEmployeesDTO>> getEmployees(@RequestParam(required = false) String name);
 
     @GetMapping("/{id}")
     ResponseEntity<EmployeeDTO> getEmployee(@PathVariable int id);
 
     @PostMapping
-    ResponseEntity<Void> createEmployee(@RequestBody EmployeeDTO employeeDTO);
+    ResponseEntity<Void> createEmployee(@Valid @RequestBody EmployeeDTO employeeDTO);
+
+    @PutMapping("/{id}")
+    ResponseEntity<Void> updateEmployee(@PathVariable int id, @Valid @RequestBody EmployeeDTO employeeDTO);
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<Void> deleteEmployee(@PathVariable int id);
 }
