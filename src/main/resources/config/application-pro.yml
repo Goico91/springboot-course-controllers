@@ -12,5 +12,6 @@ server:
 # = SPRING BOOT GENERAL
 # # ===============================
 spring:
-  profiles:
-    active: pro
+  config:
+    activate:
+      on-profile: pro

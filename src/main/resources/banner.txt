@@ -15,3 +15,10 @@
           |            /                            \             |
            \          /                              \           /
             \________/                                \_________/
+
+-------------------------------------------------------------------------
+    Application '${spring.application.name}' is running!
+    Local:          http://localhost:${server.port}
+    External:       http://127.0.0.1:${server.port}
+    Profile(s):     [${spring.profiles.active}]
+-------------------------------------------------------------------------
